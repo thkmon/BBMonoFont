@@ -1,6 +1,6 @@
 # BB Mono Font
 
-IBM Plex Mono의 라틴 글리프와 한글/CJK 글리프를 결합한 코딩용 고정폭 폰트입니다.
+IBM Plex Mono의 라틴 글리프와 한글/CJK 글리프를 결합한 코딩용 고정폭 글꼴 모음(Font collection)입니다.
 영문 한 글자의 advance는 600, 한글 한 글자의 advance는 1200으로 고정되어
 터미널과 편집기에서 정확한 **영문 1칸 : 한글 2칸** 격자를 제공합니다.
 
