@@ -1,8 +1,9 @@
 # BB Mono Font
 
-IBM Plex Mono의 라틴 글리프와 한글/CJK 글리프를 결합한 코딩용 고정폭 글꼴 모음(Font collection)입니다.
-영문 한 글자의 advance는 600, 한글 한 글자의 advance는 1200으로 고정되어
-터미널과 편집기에서 정확한 **영문 1칸 : 한글 2칸** 격자를 제공합니다.
+IBM Plex Mono의 라틴 글리프와 한글/CJK 글리프를 결합한 코딩용 고정폭 글꼴
+모음(Font collection)입니다. 영문 한 글자의 advance는 600, 한글 한 글자의
+advance는 1200으로 고정되어 터미널과 편집기에서 정확한 **영문 1칸 : 한글
+2칸** 격자를 제공합니다.
 
 ## 폰트 종류
 
@@ -124,7 +125,9 @@ python scripts/verify_fonts.py fonts
 
 ## English summary
 
-BB Mono Font combines IBM Plex Mono Latin glyphs with Korean/CJK glyphs while
-keeping an exact 600:1200 Latin-to-Hangul advance ratio. `BB Mono I` uses IBM
-Plex Sans KR for modern Hangul, and `BB Mono S` uses Sarasa Mono K. Build code
-is MIT-licensed; source and generated fonts remain under SIL OFL 1.1.
+BB Mono Font is a monospaced font collection for coding that combines IBM Plex
+Mono Latin glyphs with Korean/CJK glyphs. It preserves an exact 600:1200
+Latin-to-Hangul advance ratio, providing a precise 1:2 Latin-to-Hangul
+character grid in terminals and editors. `BB Mono I` uses IBM Plex Sans KR for
+modern Hangul, while `BB Mono S` uses Sarasa Mono K. Build code is MIT-licensed;
+source and generated fonts remain under SIL OFL 1.1.
