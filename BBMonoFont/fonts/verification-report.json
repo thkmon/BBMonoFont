@@ -1,0 +1,62 @@
+[
+  {
+    "file": "BBMono-I-Regular.ttf",
+    "family": "BB Mono I",
+    "style": "Regular",
+    "glyphs": 34107,
+    "mapped_codepoints": 33952,
+    "modern_hangul": 11172,
+    "hinted_modern_hangul": 11172,
+    "selected_cjk": 32904,
+    "latin_advance": 600,
+    "hangul_advance": 1200,
+    "gsub_lookups": 30,
+    "sha256": "A9A95DAA5BA40BDBA7CA612EFC318BB31F0BB31D2290B22E4A328E3D02842D9B",
+    "bytes": 18863996
+  },
+  {
+    "file": "BBMono-I-Bold.ttf",
+    "family": "BB Mono I",
+    "style": "Bold",
+    "glyphs": 34107,
+    "mapped_codepoints": 33952,
+    "modern_hangul": 11172,
+    "hinted_modern_hangul": 11172,
+    "selected_cjk": 32904,
+    "latin_advance": 600,
+    "hangul_advance": 1200,
+    "gsub_lookups": 30,
+    "sha256": "BC4EE5857CD510EEB040E52E5D860DF5D1E15EC7EEB615922BD9F6447AC36753",
+    "bytes": 19872560
+  },
+  {
+    "file": "BBMono-S-Regular.ttf",
+    "family": "BB Mono S",
+    "style": "Regular",
+    "glyphs": 34106,
+    "mapped_codepoints": 33952,
+    "modern_hangul": 11172,
+    "hinted_modern_hangul": 11172,
+    "selected_cjk": 32904,
+    "latin_advance": 600,
+    "hangul_advance": 1200,
+    "gsub_lookups": 30,
+    "sha256": "D9046D4CDFCF992C1CBA13302A094561ABC594EEA5B48F34C5B406068B3BEC73",
+    "bytes": 17982676
+  },
+  {
+    "file": "BBMono-S-Bold.ttf",
+    "family": "BB Mono S",
+    "style": "Bold",
+    "glyphs": 34106,
+    "mapped_codepoints": 33952,
+    "modern_hangul": 11172,
+    "hinted_modern_hangul": 11172,
+    "selected_cjk": 32904,
+    "latin_advance": 600,
+    "hangul_advance": 1200,
+    "gsub_lookups": 30,
+    "sha256": "41DB1364DC5315E9468E8DE99D56F903D0BC674D03DE86D693BFAFDF896ABA71",
+    "bytes": 18339896
+  }
+]

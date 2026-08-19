@@ -1,0 +1,144 @@
+[
+  {
+    "family": "BB Mono I",
+    "style": "Regular",
+    "file": "BBMono-I-Regular.ttf",
+    "base": "IBMPlexMono-Regular.ttf",
+    "primary": "IBMPlexSansKR-Regular.ttf",
+    "fallback": "SarasaMonoK-Regular.ttf",
+    "latin_advance": 600,
+    "cjk_advance": 1200,
+    "primary_scale": [
+      1.1363636363636365,
+      1.1363636363636365
+    ],
+    "fallback_scale": [
+      1.1,
+      1.08
+    ],
+    "copied": {
+      "target_center": 374.5,
+      "donor_centers": {
+        "p": 312.0,
+        "f": 374.5
+      },
+      "y_shifts": {
+        "p": 19.95454545454544,
+        "f": -29.960000000000036
+      },
+      "codepoints": 32904,
+      "glyphs": 32900
+    },
+    "jamo_composition_rules": 11172,
+    "base_gsub_lookups": 29,
+    "output_gsub_lookups": 30,
+    "autohinted": true,
+    "sha256": "A9A95DAA5BA40BDBA7CA612EFC318BB31F0BB31D2290B22E4A328E3D02842D9B",
+    "bytes": 18863996,
+    "seconds": 63.371
+  },
+  {
+    "family": "BB Mono S",
+    "style": "Regular",
+    "file": "BBMono-S-Regular.ttf",
+    "base": "IBMPlexMono-Regular.ttf",
+    "primary": "SarasaMonoK-Regular.ttf",
+    "fallback": null,
+    "latin_advance": 600,
+    "cjk_advance": 1200,
+    "primary_scale": [
+      1.1,
+      1.08
+    ],
+    "fallback_scale": null,
+    "copied": {
+      "target_center": 374.5,
+      "donor_centers": {
+        "p": 374.5
+      },
+      "y_shifts": {
+        "p": -29.960000000000036
+      },
+      "codepoints": 32904,
+      "glyphs": 32899
+    },
+    "jamo_composition_rules": 11172,
+    "base_gsub_lookups": 29,
+    "output_gsub_lookups": 30,
+    "autohinted": true,
+    "sha256": "D9046D4CDFCF992C1CBA13302A094561ABC594EEA5B48F34C5B406068B3BEC73",
+    "bytes": 17982676,
+    "seconds": 32.326
+  },
+  {
+    "family": "BB Mono I",
+    "style": "Bold",
+    "file": "BBMono-I-Bold.ttf",
+    "base": "IBMPlexMono-Bold.ttf",
+    "primary": "IBMPlexSansKR-Bold.ttf",
+    "fallback": "SarasaMonoK-Bold.ttf",
+    "latin_advance": 600,
+    "cjk_advance": 1200,
+    "primary_scale": [
+      1.1363636363636365,
+      1.1363636363636365
+    ],
+    "fallback_scale": [
+      1.1,
+      1.08
+    ],
+    "copied": {
+      "target_center": 374.5,
+      "donor_centers": {
+        "p": 310.0,
+        "f": 374.5
+      },
+      "y_shifts": {
+        "p": 22.22727272727269,
+        "f": -29.960000000000036
+      },
+      "codepoints": 32904,
+      "glyphs": 32900
+    },
+    "jamo_composition_rules": 11172,
+    "base_gsub_lookups": 29,
+    "output_gsub_lookups": 30,
+    "autohinted": true,
+    "sha256": "BC4EE5857CD510EEB040E52E5D860DF5D1E15EC7EEB615922BD9F6447AC36753",
+    "bytes": 19872560,
+    "seconds": 35.119
+  },
+  {
+    "family": "BB Mono S",
+    "style": "Bold",
+    "file": "BBMono-S-Bold.ttf",
+    "base": "IBMPlexMono-Bold.ttf",
+    "primary": "SarasaMonoK-Bold.ttf",
+    "fallback": null,
+    "latin_advance": 600,
+    "cjk_advance": 1200,
+    "primary_scale": [
+      1.1,
+      1.08
+    ],
+    "fallback_scale": null,
+    "copied": {
+      "target_center": 374.5,
+      "donor_centers": {
+        "p": 374.5
+      },
+      "y_shifts": {
+        "p": -29.960000000000036
+      },
+      "codepoints": 32904,
+      "glyphs": 32899
+    },
+    "jamo_composition_rules": 11172,
+    "base_gsub_lookups": 29,
+    "output_gsub_lookups": 30,
+    "autohinted": true,
+    "sha256": "41DB1364DC5315E9468E8DE99D56F903D0BC674D03DE86D693BFAFDF896ABA71",
+    "bytes": 18339896,
+    "seconds": 83.068
+  }
+]

@@ -1,0 +1,36 @@
+FONTLOG for BB Mono Font
+========================
+
+Version 1.000 - 2026-08-19
+--------------------------
+
+Initial public build.
+
+BB Mono I:
+- IBM Plex Mono Regular/Bold is the Latin and coding-symbol base.
+- IBM Plex Sans KR supplies all 11,172 modern Hangul syllables.
+- Sarasa Mono K supplies Hangul Jamo, Hanja, fullwidth characters, and other
+  selected CJK blocks not assigned to IBM Plex Sans KR.
+
+BB Mono S:
+- IBM Plex Mono Regular/Bold is the Latin and coding-symbol base.
+- Sarasa Mono K supplies modern Hangul and the selected CJK blocks.
+
+Shared modifications:
+- Latin advance remains 600 units.
+- Hangul, Hanja, and fullwidth advances are fixed at 1200 units; Unicode
+  halfwidth forms remain 600 units.
+- Imported coverage is limited to 32,904 Korean coding-font code points:
+  modern Hangul, Jamo blocks, 20,992 basic unified ideographs, CJK punctuation,
+  and halfwidth/fullwidth forms.
+- Every imported outline is decomposed, independently scaled, and horizontally
+  centered in its 1200-unit cell.
+- IBM Plex Sans KR scale: X 1.1363636364, Y 1.1363636364.
+- Sarasa Mono K scale: X 1.10, Y 1.08.
+- A single donor-wide vertical offset aligns each source to the measured median
+  center of Sarasa Mono K modern Hangul.
+- 11,172 Hangul Jamo composition rules are added to the ccmp feature.
+- TrueType autohinting is applied with Windows compatibility enabled.
+- Family and PostScript names are changed to avoid upstream Reserved Font Names.
+
+The exact upstream binaries are identified by SOURCES.sha256.
