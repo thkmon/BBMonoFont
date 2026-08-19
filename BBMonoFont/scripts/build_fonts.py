@@ -33,7 +33,7 @@ from fontTools.ttLib.tables._c_m_a_p import CmapSubtable
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE_ROOT = ROOT / "source-fonts"
 DEFAULT_OUTPUT = ROOT / "fonts"
-VERSION = "1.000"
+VERSION = "1.100"
 LATIN_ADVANCE = 600
 CJK_ADVANCE = 1200
 
@@ -405,6 +405,7 @@ def autohint(source: Path, destination: Path) -> None:
             str(executable),
             "--increase-x-height=0",
             "--windows-compatibility",
+            "--fallback-scaling",
             "--ttfa-table",
             str(source),
             str(destination),
@@ -457,7 +458,6 @@ def build_one(family: FamilySpec, style: str, output_dir: Path, skip_autohint: b
 
         old_lookup_count = len(base["GSUB"].table.LookupList.Lookup) if "GSUB" in base else 0
         mapping, copy_report = add_cjk_glyphs(base, family, primary, fallback, target_center)
-        composition_rules = add_jamo_composition(base, mapping)
         rewrite_metadata(base, family, style)
 
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -470,11 +470,16 @@ def build_one(family: FamilySpec, style: str, output_dir: Path, skip_autohint: b
             else:
                 autohint(unhinted, final_path)
 
-        # ttfautohint adjusts version metadata. Restore all public names and a
-        # deterministic timestamp after hinting.
+        # Add the Hangul composition lookup only after autohinting.  If it is
+        # present during ttfautohint's GSUB analysis, the lookup makes modern
+        # Hangul output glyphs inherit Latin styles and receive inappropriate
+        # Latin edge hints.  Imported CJK glyphs are intentionally handled by
+        # fallback scaling while IBM's Latin glyphs remain hinted.
         finished = TTFont(final_path, recalcTimestamp=False)
         try:
+            composition_rules = add_jamo_composition(finished, mapping)
             rewrite_metadata(finished, family, style)
+            output_gsub_lookups = len(finished["GSUB"].table.LookupList.Lookup)
             finished.save(final_path, reorderTables=False)
         finally:
             finished.close()
@@ -493,8 +498,9 @@ def build_one(family: FamilySpec, style: str, output_dir: Path, skip_autohint: b
             "copied": copy_report,
             "jamo_composition_rules": composition_rules,
             "base_gsub_lookups": old_lookup_count,
-            "output_gsub_lookups": len(base["GSUB"].table.LookupList.Lookup),
+            "output_gsub_lookups": output_gsub_lookups,
             "autohinted": not skip_autohint,
+            "cjk_hinting": "fallback-scaling" if not skip_autohint else "unhinted",
             "sha256": sha256(final_path),
             "bytes": final_path.stat().st_size,
             "seconds": round(time.perf_counter() - started, 3),

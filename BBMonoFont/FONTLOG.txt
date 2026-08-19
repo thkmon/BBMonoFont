@@ -1,6 +1,16 @@
 FONTLOG for BB Mono Font
 ========================
 
+Version 1.100 - 2026-08-20
+--------------------------
+
+- Product version is 1.1.0 (OpenType font revision 1.100).
+- Keep imported Hangul and CJK glyphs unhinted through ttfautohint fallback
+  scaling so their proportions progress smoothly at small pixel sizes.
+- Add Hangul Jamo composition rules after autohinting.  This prevents GSUB
+  feature analysis from assigning Latin hinting styles to modern Hangul.
+- Preserve TrueType hinting for IBM Plex Mono Latin glyphs.
+
 Version 1.000 - 2026-08-19
 --------------------------
 

@@ -33,9 +33,10 @@
     "base_gsub_lookups": 29,
     "output_gsub_lookups": 30,
     "autohinted": true,
-    "sha256": "A9A95DAA5BA40BDBA7CA612EFC318BB31F0BB31D2290B22E4A328E3D02842D9B",
-    "bytes": 18863996,
-    "seconds": 63.371
+    "cjk_hinting": "fallback-scaling",
+    "sha256": "C03C1DEA7F92F68CF50C6110EBC60720BD47A99C48CD81EE53ED92BFB7C5097B",
+    "bytes": 9728152,
+    "seconds": 30.741
   },
   {
     "family": "BB Mono S",
@@ -66,9 +67,10 @@
     "base_gsub_lookups": 29,
     "output_gsub_lookups": 30,
     "autohinted": true,
-    "sha256": "D9046D4CDFCF992C1CBA13302A094561ABC594EEA5B48F34C5B406068B3BEC73",
-    "bytes": 17982676,
-    "seconds": 32.326
+    "cjk_hinting": "fallback-scaling",
+    "sha256": "2E8D0933147342414027237E9A63DC4C7AD2875C550BC42A50C8825279C60944",
+    "bytes": 9564704,
+    "seconds": 27.559
   },
   {
     "family": "BB Mono I",
@@ -104,9 +106,10 @@
     "base_gsub_lookups": 29,
     "output_gsub_lookups": 30,
     "autohinted": true,
-    "sha256": "BC4EE5857CD510EEB040E52E5D860DF5D1E15EC7EEB615922BD9F6447AC36753",
-    "bytes": 19872560,
-    "seconds": 35.119
+    "cjk_hinting": "fallback-scaling",
+    "sha256": "104D41D3381988C69DEAB4562F01617D662962D4DB5F9E37840D3516C75D5A51",
+    "bytes": 9545388,
+    "seconds": 30.122
   },
   {
     "family": "BB Mono S",
@@ -137,8 +140,9 @@
     "base_gsub_lookups": 29,
     "output_gsub_lookups": 30,
     "autohinted": true,
-    "sha256": "41DB1364DC5315E9468E8DE99D56F903D0BC674D03DE86D693BFAFDF896ABA71",
-    "bytes": 18339896,
-    "seconds": 83.068
+    "cjk_hinting": "fallback-scaling",
+    "sha256": "F10F0CDAFEDD0496C1F5C5C0C7DF38953B2ECDE359009A21B48A56E23C732066",
+    "bytes": 9393832,
+    "seconds": 26.804
   }
 ]

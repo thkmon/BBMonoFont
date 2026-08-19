@@ -30,6 +30,7 @@ CJK_RANGES = (
     (0xD7B0, 0xD7FF),
     (0xFF00, 0xFFEF),
 )
+EXPECTED_VERSION = "1.100"
 
 
 def sha256(path: Path) -> str:
@@ -66,6 +67,7 @@ def check_font(path: Path, expected_family: str, expected_style: str) -> dict[st
         family_names = names(font, 1)
         style_names = names(font, 2)
         postscript_names = names(font, 6)
+        version_names = names(font, 5)
 
         if family_names != {expected_family}:
             errors.append(f"family names: {sorted(family_names)}")
@@ -74,6 +76,12 @@ def check_font(path: Path, expected_family: str, expected_style: str) -> dict[st
         expected_ps = f"{expected_family.replace(' ', '')}-{expected_style}"
         if postscript_names != {expected_ps}:
             errors.append(f"PostScript names: {sorted(postscript_names)}")
+        if version_names != {f"Version {EXPECTED_VERSION}"}:
+            errors.append(f"version names: {sorted(version_names)}")
+        if abs(font["head"].fontRevision - float(EXPECTED_VERSION)) > 0.0001:
+            errors.append(
+                f"font revision is {font['head'].fontRevision}, expected {EXPECTED_VERSION}"
+            )
         latin_checks = "A0{}[]()<>/\\|_-=+abcdefghijklmnopqrstuvwxyz"
         for character in latin_checks:
             glyph_name = cmap.get(ord(character))
@@ -115,8 +123,12 @@ def check_font(path: Path, expected_family: str, expected_style: str) -> dict[st
         }
         if len(cjk_codepoints) != 32904:
             errors.append(f"selected CJK coverage is {len(cjk_codepoints)}, expected 32904")
+        hinted_cjk = 0
         for codepoint in cjk_codepoints:
             wanted = expected_advance(codepoint)
+            glyph = font["glyf"][cmap[codepoint]]
+            if getattr(glyph, "program", None) is not None and glyph.program.getBytecode():
+                hinted_cjk += 1
             if metrics[cmap[codepoint]][0] != wanted:
                 errors.append(
                     f"selected CJK U+{codepoint:04X} advance is {metrics[cmap[codepoint]][0]}, expected {wanted}"
@@ -124,8 +136,17 @@ def check_font(path: Path, expected_family: str, expected_style: str) -> dict[st
                 break
         if "TTFA" not in font:
             errors.append("TTFA table is missing; output was not autohinted")
-        if hangul_hinted != 11172:
-            errors.append(f"hinted modern Hangul glyphs: {hangul_hinted}, expected 11172")
+        else:
+            ttfa = font["TTFA"].data.decode("ascii", errors="replace")
+            if "fallback-scaling = 1" not in ttfa:
+                errors.append("TTFA table does not enable fallback scaling")
+        if hangul_hinted != 0:
+            errors.append(f"hinted modern Hangul glyphs: {hangul_hinted}, expected 0")
+        if hinted_cjk != 0:
+            errors.append(f"hinted selected CJK glyphs: {hinted_cjk}, expected 0")
+        latin_a = font["glyf"][cmap[ord("A")]]
+        if not latin_a.program.getBytecode():
+            errors.append("Latin U+0041 lost its TrueType hints")
         if "GSUB" not in font:
             errors.append("GSUB table is missing")
         else:
@@ -167,6 +188,7 @@ def check_font(path: Path, expected_family: str, expected_style: str) -> dict[st
             "mapped_codepoints": len(cmap),
             "modern_hangul": hangul_count,
             "hinted_modern_hangul": hangul_hinted,
+            "hinted_selected_cjk": hinted_cjk,
             "selected_cjk": len(cjk_codepoints),
             "latin_advance": metrics[cmap[ord("A")]][0],
             "hangul_advance": metrics[cmap[0xAC00]][0],

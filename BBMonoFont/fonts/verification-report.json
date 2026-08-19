@@ -6,13 +6,14 @@
     "glyphs": 34107,
     "mapped_codepoints": 33952,
     "modern_hangul": 11172,
-    "hinted_modern_hangul": 11172,
+    "hinted_modern_hangul": 0,
+    "hinted_selected_cjk": 0,
     "selected_cjk": 32904,
     "latin_advance": 600,
     "hangul_advance": 1200,
     "gsub_lookups": 30,
-    "sha256": "A9A95DAA5BA40BDBA7CA612EFC318BB31F0BB31D2290B22E4A328E3D02842D9B",
-    "bytes": 18863996
+    "sha256": "C03C1DEA7F92F68CF50C6110EBC60720BD47A99C48CD81EE53ED92BFB7C5097B",
+    "bytes": 9728152
   },
   {
     "file": "BBMono-I-Bold.ttf",
@@ -21,13 +22,14 @@
     "glyphs": 34107,
     "mapped_codepoints": 33952,
     "modern_hangul": 11172,
-    "hinted_modern_hangul": 11172,
+    "hinted_modern_hangul": 0,
+    "hinted_selected_cjk": 0,
     "selected_cjk": 32904,
     "latin_advance": 600,
     "hangul_advance": 1200,
     "gsub_lookups": 30,
-    "sha256": "BC4EE5857CD510EEB040E52E5D860DF5D1E15EC7EEB615922BD9F6447AC36753",
-    "bytes": 19872560
+    "sha256": "104D41D3381988C69DEAB4562F01617D662962D4DB5F9E37840D3516C75D5A51",
+    "bytes": 9545388
   },
   {
     "file": "BBMono-S-Regular.ttf",
@@ -36,13 +38,14 @@
     "glyphs": 34106,
     "mapped_codepoints": 33952,
     "modern_hangul": 11172,
-    "hinted_modern_hangul": 11172,
+    "hinted_modern_hangul": 0,
+    "hinted_selected_cjk": 0,
     "selected_cjk": 32904,
     "latin_advance": 600,
     "hangul_advance": 1200,
     "gsub_lookups": 30,
-    "sha256": "D9046D4CDFCF992C1CBA13302A094561ABC594EEA5B48F34C5B406068B3BEC73",
-    "bytes": 17982676
+    "sha256": "2E8D0933147342414027237E9A63DC4C7AD2875C550BC42A50C8825279C60944",
+    "bytes": 9564704
   },
   {
     "file": "BBMono-S-Bold.ttf",
@@ -51,12 +54,13 @@
     "glyphs": 34106,
     "mapped_codepoints": 33952,
     "modern_hangul": 11172,
-    "hinted_modern_hangul": 11172,
+    "hinted_modern_hangul": 0,
+    "hinted_selected_cjk": 0,
     "selected_cjk": 32904,
     "latin_advance": 600,
     "hangul_advance": 1200,
     "gsub_lookups": 30,
-    "sha256": "41DB1364DC5315E9468E8DE99D56F903D0BC674D03DE86D693BFAFDF896ABA71",
-    "bytes": 18339896
+    "sha256": "F10F0CDAFEDD0496C1F5C5C0C7DF38953B2ECDE359009A21B48A56E23C732066",
+    "bytes": 9393832
   }
 ]
