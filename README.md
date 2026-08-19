@@ -50,7 +50,7 @@ IBM Plex Mono의 라틴 글리프와 한글/CJK 글리프를 결합한 코딩용
 - Python 3.10 이상
 - 인터넷 연결(고정 버전 Python 패키지 설치 시에만 필요)
 
-저장소 루트에서 실행합니다. Eclipse 프로젝트는 `BBMonoFont` 하위 디렉터리에
+저장소 루트에서 실행합니다. 프로젝트는 `BBMonoFont` 하위 디렉터리에
 있지만 `build.ps1`이 자신의 위치를 기준으로 동작하므로 별도로 이동할 필요가 없습니다.
 
 ```powershell
@@ -95,7 +95,7 @@ python scripts/verify_fonts.py fonts
 ├─ .github/workflows/     GitHub Actions 빌드 검증
 ├─ LICENSE                빌드 코드의 MIT 라이선스
 ├─ README.md              GitHub 저장소 안내
-└─ BBMonoFont/            Eclipse 프로젝트 및 폰트 빌드 본체
+└─ BBMonoFont/            프로젝트 및 폰트 빌드 본체
    ├─ fonts/              생성된 BB Mono 폰트와 검증 결과
    ├─ scripts/
    │  ├─ build_fonts.py   독립 폰트 생성기
