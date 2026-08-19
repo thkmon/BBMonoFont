@@ -1,0 +1,38 @@
+name: build-fonts
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: BBMonoFont/requirements.txt
+      - name: Verify source files
+        run: python scripts/verify_sources.py
+        working-directory: BBMonoFont
+      - name: Install build dependencies
+        run: python -m pip install -r requirements.txt
+        working-directory: BBMonoFont
+      - name: Build fonts
+        run: python scripts/build_fonts.py
+        working-directory: BBMonoFont
+      - name: Verify fonts
+        run: python scripts/verify_fonts.py fonts
+        working-directory: BBMonoFont
+      - name: Upload generated fonts
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-mono-font
+          path: |
+            BBMonoFont/fonts/BBMono-*.ttf
+            BBMonoFont/fonts/SHA256SUMS.txt
+            BBMonoFont/fonts/build-report.json
+            BBMonoFont/fonts/verification-report.json
